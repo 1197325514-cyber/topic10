@@ -6,7 +6,7 @@
 小组成员：林川胜、李泽欣、李贤记、冯晓怡。
 
 ## 与 Codex 对话记录
-- [查看对话](codex://threads/019d328d-91dd-7cc2-b2b9-ae3d6156363b)
+[查看对话](codex://threads/019d328d-91dd-7cc2-b2b9-ae3d6156363b)
 
 ## 一、`setup.py` 是做什么的？
 `setup.py` 是 Python 打包与安装配置文件，主要作用：
