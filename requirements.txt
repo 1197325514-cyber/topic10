@@ -1,0 +1,19 @@
+# 核心依赖（精简版 - 推荐用于新项目）
+pandas>=2.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# A股数据源
+baostock>=0.8.9
+
+# Jupyter Notebook 支持（可选，用于运行 .ipynb 文件）
+ipykernel>=6.0.0
+jupyter>=1.0.0
+
+# 以下是 pip freeze 生成的完整依赖列表（如需精确版本锁定，请使用）
+# 运行: pip install -r requirements.txt --no-deps 后再运行: pip freeze > requirements-lock.txt
+
+# 详细依赖（从 pip freeze 自动生成）
+# appnope==0.1.4
+# asttokens==3.0.1
+# ...
