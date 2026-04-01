@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h1 class="site-title">{{ site.title }}</h1>
+        <p class="site-description">{{ site.description }}</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <h3 class="nav-title"><i class="fas fa-home"></i> 导航</h3>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
+              <i class="fas fa-file-alt"></i> 首页
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
+          <h3 class="nav-title"><i class="fas fa-book"></i> Notebook</h3>
+          <ul>
+            <li><a href="{{ '/01_api_download.html' | relative_url }}">
+              <i class="fas fa-download"></i> API 数据下载
+            </a></li>
+            <li><a href="{{ '/02_database_setup.html' | relative_url }}">
+              <i class="fas fa-database"></i> 数据库构建
+            </a></li>
+            <li><a href="{{ '/03_sql_analysis.html' | relative_url }}">
+              <i class="fas fa-search"></i> SQL 分析
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
+          <h3 class="nav-title"><i class="fas fa-code"></i> 脚本</h3>
+          <ul>
+            <li><a href="{{ '/topic10_workflow.html' | relative_url }}">
+              <i class="fas fa-cogs"></i> 工作流程
+            </a></li>
+            <li><a href="{{ '/update_db.html' | relative_url }}">
+              <i class="fas fa-sync"></i> 更新数据库
+            </a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="team-info">
+          <p><i class="fas fa-users"></i> 小组成员</p>
+          <span>林川胜 · 李泽欣 · 李贤记 · 冯晓怡</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <article class="article">
+        {{ content }}
+      </article>
+
+      <footer class="page-footer">
+        <p>&copy; 2026 Topic 10 小组 · 金融数据分析项目</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,28 +1,53 @@
-  # 基本信息                                                                                                                      
-  title: "Topic 10"                                                                                                               
-  description: "金融数据分析项目"                                                                                                 
-  author: "Topic 10 小组"                                                                                                         
-                                                                                                                                  
-  # 使用 minimal 主题（支持侧边栏）                                                                                               
-  theme: jekyll-theme-minimal                                                                                                     
-                                                                                                                                  
-  # 侧边栏导航链接                                                                                                                
-  header_pages:                                                                                                                   
-    - README.md                                                                                                                   
-    - 01_api_download.ipynb                                                                                                       
-    - 02_database_setup.ipynb                                                                                                     
-    - 03_sql_analysis.ipynb                                                                                                       
-    - topic10_workflow.py                                                                                                         
-    - update_db.py                                                                                                                
-                                                                                                                                  
-  # Markdown 设置                                                                                                                 
-  markdown: kramdown                                                                                                              
-                                                                                                                                  
-  # 插件                                                                                                                          
-  plugins:                                                                                                                        
-    - jekyll-relative-links                                                                                                       
-                                                                                                                                  
-  exclude:                                                                                                                        
-    - ".env.example"                                                                                                              
-    - "requirements.txt"                                                                                                          
-    - "setup.py"    
+# ===========================================
+# Topic 10 - 金融数据分析项目
+# GitHub Pages Jekyll 配置
+# ===========================================
+
+# 基本信息
+title: "Topic 10"
+description: "金融数据分析项目"
+author: "Topic 10 小组"
+
+# URL 配置
+url: "https://1197325514-cyber.github.io"
+baseurl: "/topic10"
+
+# 主题
+theme: jekyll-theme-minimal
+
+# 插件
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+# Markdown 设置
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 默认布局
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# 排除文件
+exclude:
+  - ".env"
+  - ".env.example"
+  - ".gitignore"
+  - ".venv"
+  - "requirements.txt"
+  - "setup.py"
+  - "__pycache__"
+  - "cache"
+  - "output"
+  - "*.db"
+  - "*.pyc"
+
+# 语言
+lang: zh-CN
