@@ -1,24 +1,28 @@
   # 基本信息                                                                                                                      
-  title: "Topic 10 - 金融数据分析项目"                                                                                            
-  description: "第一次小组作业 - API数据下载、数据库构建与SQL分析"                                                                
+  title: "Topic 10"                                                                                                               
+  description: "金融数据分析项目"                                                                                                 
   author: "Topic 10 小组"                                                                                                         
                                                                                                                                   
-  # 主题选择（选一个）                                                                                                            
-  theme: jekyll-theme-cayman                                                                                                      
+  # 使用 minimal 主题（支持侧边栏）                                                                                               
+  theme: jekyll-theme-minimal                                                                                                     
                                                                                                                                   
-  # 以下主题可选：                                                                                                                
-  # theme: jekyll-theme-minimal      # 简洁，适合文档                                                                             
-  # theme: jekyll-theme-cayman       # 彩色头部，适合项目主页                                                                     
-  # theme: jekyll-theme-slate        # 深色主题                                                                                   
-  # theme: jekyll-theme-modernist    # 现代风格                                                                                   
-  # theme: jekyll-theme-leap-day     # 专业感                                                                                     
+  # 侧边栏导航链接                                                                                                                
+  header_pages:                                                                                                                   
+    - README.md                                                                                                                   
+    - 01_api_download.ipynb                                                                                                       
+    - 02_database_setup.ipynb                                                                                                     
+    - 03_sql_analysis.ipynb                                                                                                       
+    - topic10_workflow.py                                                                                                         
+    - update_db.py                                                                                                                
                                                                                                                                   
   # Markdown 设置                                                                                                                 
   markdown: kramdown                                                                                                              
                                                                                                                                   
-  # 排除文件（不会发布到 Pages）                                                                                                  
+  # 插件                                                                                                                          
+  plugins:                                                                                                                        
+    - jekyll-relative-links                                                                                                       
+                                                                                                                                  
   exclude:                                                                                                                        
     - ".env.example"                                                                                                              
     - "requirements.txt"                                                                                                          
-    - "setup.py"                                                                                                                  
-    - "*.ipynb_checkpoints"   
+    - "setup.py"    
