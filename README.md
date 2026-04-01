@@ -1,8 +1,3 @@
----
-layout: default
-title: 首页
----
-
 # 📊 Topic 10：API 调用与 SQLite 数据库管理
 
 **从数据获取到数据库管理再到 SQL 分析的完整流程**
