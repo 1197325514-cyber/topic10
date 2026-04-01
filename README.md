@@ -1,4 +1,7 @@
-<div align="center">
+---
+layout: default
+title: 首页
+---
 
 # 📊 Topic 10：API 调用与 SQLite 数据库管理
 
@@ -7,8 +10,6 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
-
-</div>
 
 ---
 
@@ -117,13 +118,13 @@ python update_db.py
 
 ### 可执行文件功能
 
-| 文件                      | 功能                             |
-| :------------------------ | :------------------------------- |
-| `01_api_download.ipynb`   | 下载/读取 FRED 与 A 股数据并缓存 |
-| `02_database_setup.ipynb` | 创建 SQLite 数据库并写入数据     |
-| `03_sql_analysis.ipynb`   | 执行 SQL 分析与主题可视化        |
-| `topic10_workflow.py`     | 脚本化一键建库主流程             |
-| `update_db.py`            | 增量更新数据库（宏观 + A 股）    |
+| 文件 | 功能 |
+|:---|:---|
+| `01_api_download.ipynb` | 下载/读取 FRED 与 A 股数据并缓存 |
+| `02_database_setup.ipynb` | 创建 SQLite 数据库并写入数据 |
+| `03_sql_analysis.ipynb` | 执行 SQL 分析与主题可视化 |
+| `topic10_workflow.py` | 脚本化一键建库主流程 |
+| `update_db.py` | 增量更新数据库（宏观 + A 股） |
 
 ### 推荐执行顺序（首次复现）
 
@@ -145,28 +146,28 @@ python update_db.py
 
 ### 核心表
 
-| 表名          | 字段                                                  | 说明         |
-| :------------ | :---------------------------------------------------- | :----------- |
-| `macro_data`  | date, series_id, value                                | 宏观经济数据 |
-| `stock_price` | code, date, open, high, low, close, volume, adj_close | 股票行情     |
-| `stock_info`  | code, name, industry, list_date, market_cap           | 股票信息     |
+| 表名 | 字段 | 说明 |
+|:---|:---|:---|
+| `macro_data` | date, series_id, value | 宏观经济数据 |
+| `stock_price` | code, date, open, high, low, close, volume, adj_close | 股票行情 |
+| `stock_info` | code, name, industry, list_date, market_cap | 股票信息 |
 
 ### 扩展表
 
-| 表名           | 说明         |
-| :------------- | :----------- |
-| `update_log`   | 更新记录     |
+| 表名 | 说明 |
+|:---|:---|
+| `update_log` | 更新记录 |
 | `data_quality` | 质量检测结果 |
 
 ---
 
 ## 📈 输出结果
 
-| 文件                       | 说明                                 |
-| :------------------------- | :----------------------------------- |
-| `output/query1_spread.png` | 收益率曲线利差图                     |
-| `output/fed_vs_fx.png`     | 利率与汇率对比图                     |
-| `output/自动结论汇总.md`   | 三个 notebook 的真实结果自动汇总文本 |
+| 文件 | 说明 |
+|:---|:---|
+| `output/query1_spread.png` | 收益率曲线利差图 |
+| `output/fed_vs_fx.png` | 利率与汇率对比图 |
+| `output/自动结论汇总.md` | 三个 notebook 的真实结果自动汇总文本 |
 
 ---
 
@@ -208,15 +209,15 @@ crontab -e
 
 ## ❓ 常见问题
 
-| 问题                | 解决方案                                                                    |
-| :------------------ | :-------------------------------------------------------------------------- |
-| 没有 `FRED_API_KEY` | 前往[FRED 官网](https://fred.stlouisfed.org/docs/api/api_key.html) 免费申请 |
-| baostock 网络波动   | `update_db.py` 会自动回退本地缓存                                           |
-| Jupyter 内核不对    | 确认使用 `.venv` 对应解释器                                                 |
-| 不应提交的文件      | `.env`、`.venv/`、`*.db`、`__pycache__/` 已在 `.gitignore` 排除---          |
+| 问题 | 解决方案 |
+|:---|:---|
+| 没有 `FRED_API_KEY` | 前往 [FRED 官网](https://fred.stlouisfed.org/docs/api/api_key.html) 免费申请 |
+| baostock 网络波动 | `update_db.py` 会自动回退本地缓存 |
+| Jupyter 内核不对 | 确认使用 `.venv` 对应解释器 |
+| 不应提交的文件 | `.env`、`.venv/`、`*.db`、`__pycache__/` 已在 `.gitignore` 排除 |
 
-<div align="center">
+---
 
-**Made with ❤️ by Topic 10 Team**
-
-</div>
+<p align="center">
+<b>Made with ❤️ by Topic 10 Team</b>
+</p>
